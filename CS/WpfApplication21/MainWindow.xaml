@@ -1,0 +1,40 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        x:Class="WpfApplication21.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <DockPanel LastChildFill="True">
+            <dxb:MainMenuControl DockPanel.Dock="Top">
+                <dxb:BarButtonItem Content="File"/>
+            </dxb:MainMenuControl>
+            <TabControl>
+                <TabItem Header="Tab 1" dxb:MergingProperties.ElementMergingBehavior="{Binding IsSelected, RelativeSource={RelativeSource Self}}">
+                    <dxb:BarContainerControl>
+                        <dxb:MainMenuControl Caption="Main Menu">
+                            <dxb:BarButtonItem Content="Tab1: Edit"/>
+                        </dxb:MainMenuControl>
+                        <dxb:ToolBarControl Caption="Bar">
+                            <dxb:BarButtonItem Content="Tab1: Cut"/>
+                        </dxb:ToolBarControl>
+                    </dxb:BarContainerControl>
+                </TabItem>
+                <TabItem Header="Tab 2" dxb:MergingProperties.ElementMergingBehavior="{Binding IsSelected, RelativeSource={RelativeSource Self}}">
+                    <dxb:BarContainerControl>
+                        <dxb:MainMenuControl Caption="Main Menu">
+                            <dxb:BarButtonItem Content="Tab2: Help"/>
+                        </dxb:MainMenuControl>
+                        <dxb:ToolBarControl Caption="Bar">
+                            <dxb:BarButtonItem Content="Tab2: About"/>
+                        </dxb:ToolBarControl>
+                    </dxb:BarContainerControl>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+
+
+    </Grid>
+</Window>
