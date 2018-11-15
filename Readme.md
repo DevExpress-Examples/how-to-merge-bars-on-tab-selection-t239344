@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/WpfApplication21/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfApplication21/MainWindow.xaml))
+<!-- default file list end -->
 # How to merge bars on tab selection
 
 
